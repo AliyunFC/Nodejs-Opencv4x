@@ -18,3 +18,13 @@ docker build -t opencv -f Dockerfile .
 ```
 docker run --rm --entrypoint sh -v "${PWD}:/tmp" opencv -c "cp /opt/opencv-layer-debian10.zip /tmp/"
 ```
+
+添加环境变量：
+
+```
+LD_LIBRARY_PATH: /opt/opencv/lib
+OPENCV_INCLUDE_DIR: /opt/opencv/include/opencv4
+OPENCV_LIB_DIR: /opt/opencv/lib
+OPENCV_BIN_DIR: /opt/opencv/bin
+OPENCV4NODEJS_DISABLE_AUTOBUILD: "1"
+```
